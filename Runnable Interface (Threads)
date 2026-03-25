@@ -1,0 +1,24 @@
+class MyThread implements Runnable {
+    String msg;
+    int time;
+
+    MyThread(String msg, int time) {
+        this.msg = msg;
+        this.time = time;
+    }
+
+    public void run() {
+        while (true) {
+            System.out.println(msg);
+            try { Thread.sleep(time); } catch (Exception e) {}
+        }
+    }
+}
+
+public class RunnableExample {
+    public static void main(String[] args) {
+        new Thread(new MyThread("Good Morning", 1000)).start();
+        new Thread(new MyThread("Hello", 2000)).start();
+        new Thread(new MyThread("Welcome", 3000)).start();
+    }
+}
