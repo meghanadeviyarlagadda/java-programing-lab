@@ -1,0 +1,16 @@
+import java.util.*;
+
+public class ListExample {
+    public static void main(String[] args) {
+        ArrayList<String> a = new ArrayList<>();
+        a.add("A");
+        a.add("B");
+
+        LinkedList<String> l = new LinkedList<>();
+        l.add("X");
+        l.add("Y");
+
+        System.out.println(a);
+        System.out.println(l);
+    }
+}
