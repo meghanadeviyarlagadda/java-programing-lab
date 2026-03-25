@@ -1,0 +1,13 @@
+import java.util.*;
+
+class SetDemo {
+    public static void main(String[] args){
+        HashSet<Integer> hs=new HashSet<>();
+        hs.add(3); hs.add(1); hs.add(2);
+
+        TreeSet<Integer> ts=new TreeSet<>(hs);
+
+        System.out.println(hs);
+        System.out.println(ts);
+    }
+}
