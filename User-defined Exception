@@ -1,0 +1,18 @@
+class MyException extends Exception{
+    MyException(String msg){
+        super(msg);
+    }
+}
+
+class TestEx {
+    public static void main(String[] args){
+        try{
+            int age=15;
+            if(age<18)
+                throw new MyException("Not Eligible");
+        }
+        catch(MyException e){
+            System.out.println(e.getMessage());
+        }
+    }
+}
