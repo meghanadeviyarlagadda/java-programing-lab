@@ -1,0 +1,17 @@
+public class Pangram {
+    public static void main(String[] args) {
+        String str = "abcdefghijklmnopqrstuvwxyz";
+        boolean[] alpha = new boolean[26];
+
+        for (char c : str.toCharArray()) {
+            if (Character.isLetter(c))
+                alpha[c - 'a'] = true;
+        }
+
+        boolean flag = true;
+        for (boolean b : alpha)
+            if (!b) flag = false;
+
+        System.out.println(flag ? "Pangram" : "Not Pangram");
+    }
+}
